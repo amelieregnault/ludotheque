@@ -1,3 +1,125 @@
-body {
-    background-color: rgb(44, 44, 44);
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@400;600&family=Work+Sans:wght@400;600&display=swap');
+
+:root {
+    color-scheme: light;
+    --bg: #f6f1e8;
+    --bg-accent: #efe2cf;
+    --text: #1f1c17;
+    --muted: #5b5347;
+    --brand: #2f6a4f;
+    --brand-dark: #214a38;
+    --card: #fffaf2;
+    --border: #dfd2bf;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Work Sans", "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: radial-gradient(1200px 600px at 10% -10%, var(--bg-accent), transparent),
+        var(--bg);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+nav {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 16px 20px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 16px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    color: var(--brand-dark);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background: var(--bg-accent);
+    color: var(--brand);
+}
+
+main {
+    max-width: 980px;
+    margin: 36px auto 48px;
+    padding: 0 20px;
+}
+
+h1 {
+    font-family: "Source Serif 4", "Times New Roman", serif;
+    font-size: 2.4rem;
+    margin: 0 0 12px;
+    color: var(--brand-dark);
+}
+
+p {
+    margin: 0 0 16px;
+    color: var(--muted);
+    font-size: 1.05rem;
+}
+
+main > div {
+    margin-top: 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 120px;
+    box-shadow: var(--shadow);
+}
+
+footer {
+    border-top: 1px solid var(--border);
+    background: var(--card);
+}
+
+footer > div {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    max-width: 120px;
+    height: auto;
+    opacity: 0.9;
+}
+
+@media (max-width: 720px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+
