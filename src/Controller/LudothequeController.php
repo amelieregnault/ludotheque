@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Attribute\Route;
 
 final class LudothequeController extends AbstractController
 {
-    #[Route('/', name: 'app_ludotheque')]
+    #[Route('/', name: 'ludotheque_index')]
     public function index(): Response
     {
         return $this->render('ludotheque/index.html.twig', [
