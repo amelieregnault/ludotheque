@@ -15,5 +15,21 @@ final class LudothequeController extends AbstractController
             'controller_name' => 'LudothequeController',
         ]);
     }
+
+    #[Route('/list', name: 'ludotheque_list')]
+    public function list(): Response
+    {
+        return $this->render('ludotheque/list.html.twig', [
+            'controller_name' => 'LudothequeController',
+        ]);
+    }
+
+    #[Route('/add', name: 'ludotheque_add')]
+    public function add(): Response
+    {
+        return $this->render('ludotheque/add.html.twig', [
+            'controller_name' => 'LudothequeController',
+        ]);
+    }
 }
 

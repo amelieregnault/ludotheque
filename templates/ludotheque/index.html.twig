@@ -6,15 +6,46 @@
 {% block body %}
 
 <main>
-	<h1>Bienvenue à la ludothèque</h1>
 
-	<p>
-		Vous pourrez trouver sur ce site plein de renseignements sur mes jeux préférés.
-	</p>
+	<div class="hero">
+        <h2>Bienvenue dans votre ludothèque</h2>
+        <p>Découvrez, empruntez et amusez-vous avec des centaines de jeux !</p>
+        <button>Voir les jeux</button>
+    </div>
 
-	<div>
+<!-- SECTION CATÉGORIES -->
+    <divclass="categories">
+        <h2>Catégories de jeux</h2>
+        <div class="categorie">
+            <h3>Jeux de société</h3>
+        </div>
+        <div class="categorie">
+            <h3>Jeux éducatifs</h3>
+        </div>
+        <div class="categorie">
+            <h3>Jeux vidéo</h3>
+        </div>
+        <div class="categorie">
+            <h3>Jeux pour enfants</h3>
+        </div>
+    </div>
 	
-	</div>
+	 <!-- SECTION INSCRIPTION -->
+    <section class="inscription">
+        <h2>Inscription</h2>
+        <form>
+            <label>Nom :</label>
+            <input type="text" required>
+
+            <label>Email :</label>
+            <input type="email" required>
+
+            <label>Message :</label>
+            <textarea></textarea>
+
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 </main>
 
 
