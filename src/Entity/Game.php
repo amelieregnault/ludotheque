@@ -25,9 +25,6 @@ class Game
     #[ORM\Column(length: 10)]
     private ?string $ageRange = null;
 
-    #[ORM\Column(length: 30)]
-    private ?string $genre = null;
-
     #[ORM\Column(type: Types::DATE_MUTABLE, nullable: true)]
     private ?\DateTime $year = null;
 
@@ -85,18 +82,6 @@ class Game
     public function setAgeRange(string $ageRange): static
     {
         $this->ageRange = $ageRange;
-
-        return $this;
-    }
-
-    public function getGenre(): ?string
-    {
-        return $this->genre;
-    }
-
-    public function setGenre(string $genre): static
-    {
-        $this->genre = $genre;
 
         return $this;
     }
